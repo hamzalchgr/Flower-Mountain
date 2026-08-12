@@ -1,0 +1,22 @@
+{
+  "name": "flower-mountain",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "concurrently": "^10.0.4",
+    "dotenv": "^17.4.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
