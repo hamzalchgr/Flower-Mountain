@@ -1,6 +1,13 @@
+import { Route, Routes } from "react-router-dom"
+import Layout from "./components/Layout/Layout"
+
 const App = () => {
   return (
-    <div>App</div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+         <Route />
+      </Route>
+    </Routes>
   )
 }
 
