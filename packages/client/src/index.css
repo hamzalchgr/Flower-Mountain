@@ -1,1 +1,63 @@
 @import "tailwindcss";
+
+@import 'tailwindcss';
+
+@theme {
+   --color-black: #000000;
+   --color-white: #ffffff;
+
+   --font-inter: 'Inter', sans-serif;
+   --font-geist-mono: 'Geist Mono', monospace;
+}
+
+@layer base {
+   body {
+      font-family: var(--font-inter);
+   }
+
+   button {
+      cursor: pointer
+   }
+}
+
+@layer components {
+   .img-container {
+      @apply w-full overflow-hidden aspect-square;
+
+      & img {
+         @apply h-full w-full object-center object-cover;
+      }
+   }
+
+   input[type="text"],
+   input[type="email"],
+   input[type="password"],
+   input[type="number"],
+   input[type="tel"],
+   input[type="search"],
+   textarea {
+      @apply bg-neutral-100 hover:bg-neutral-50 h-14 border-[1.75px] border-neutral-200 px-4 focus:outline-none focus:border-black placeholder:text-black w-full;
+   }
+
+   .nav-link {
+      @apply relative h-fit w-fit;
+   }
+
+   .nav-link::after {
+      @apply content-[""] absolute bottom-0 left-0 h-px w-full bg-white scale-x-0 origin-left transition-transform duration-200;
+   }
+
+   .nav-link:hover::after {
+      @apply scale-x-100;
+   }
+
+   .nav-link:focus::after {
+      @apply scale-x-100;
+   }
+
+
+   /*  */
+   .header-desktop-container {
+      @apply grid grid-cols-[1fr_2fr] h-22.5 items-center text-white
+   }
+}
