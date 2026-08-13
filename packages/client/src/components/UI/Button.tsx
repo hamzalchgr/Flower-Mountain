@@ -33,7 +33,7 @@ const Button = ({
    children,
    ...props
 }: ButtonProps) => {
-   const baseClasses = 'rounded-full capitalize font-medium leading-tight cursor-pointer grid place-items-center disabled:text-neutral-400 disabled:bg-neutral-100 disabled:cursor-default';
+   const baseClasses = 'rounded-full capitalize font-medium leading-tight cursor-pointer grid place-items-center disabled:text-neutral-400 disabled:bg-neutral-100 disabled:cursor-default disabled:border-neutral-400';
 
    return (
       <button

@@ -2,7 +2,7 @@ import { Minus, Plus, Trash2 } from 'lucide-react';
 import Button from '../UI/Button';
 import { formatPrice } from '../../utils/formatPrice';
 import { Link } from 'react-router-dom';
-import type { CartItemProps } from '../../App';
+import type { CartItemProps } from '../../pages/Cart/Cart';
 
 const CartItem = ({ cartItem }: { cartItem: CartItemProps }) => {
    const { id, title, price, collection, sale, image, color, quantity, size } =
@@ -52,6 +52,7 @@ const CartItem = ({ cartItem }: { cartItem: CartItemProps }) => {
                   <Button
                      variant="outline"
                      size="icon"
+                     disabled={quantity === 1}
                      onClick={(e) => {
                         e.preventDefault();
                         console.log('Qantity --');
